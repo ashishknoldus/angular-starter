@@ -15,11 +15,25 @@
 
     <script src="systemjs.config.js"></script>
     <script>
-      System.import('main.js').catch(function(err){ console.error(err); });
+      System.import('./dist/main.js').catch(function(err){ console.error(err); });
     </script>
+
+    <style>
+      div.header {
+        height: 50px;
+        font-size: 30px;
+        font-weight: bolder;
+        color: #336699;
+      }
+    </style>
+
   </head>
 
   <body>
-    <my-app>Loading AppComponent content here ...</my-app>
+
+  <div class="header">This is Angular Session</div>
+  <home>There is home component</home>
+  <my-app>Loading AppComponent content here ...</my-app>
+
   </body>
 </html>

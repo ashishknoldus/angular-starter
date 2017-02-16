@@ -1,0 +1,47 @@
+input[type='text'] {
+  border: 1px solid #336699;
+  height: 30px;
+  border-radius: 3px;
+  margin: 3px;
+  display: inline-block;
+  float: left;
+  clear: left;
+}
+
+button.big-button {
+  height: 30px;
+  border-radius: 3px;
+  background-color: #589950;
+  color: aliceblue;
+  border: none;
+  margin: 3px;
+  display: inline-block;
+  float: left;
+  clear: left;
+}
+
+form {
+  border: 1px solid #e2e2e2;
+  border-radius: 3px;
+  padding: 5px;
+  display: inline-block;
+  float: left;
+  clear: both;
+}
+
+form button {
+  padding: 5px;
+}
+
+form h2 {
+  color: #336699;
+}
+
+ul {
+  display: block;
+  float: left;
+  clear: both;
+  list-style-type: georgian;
+  font-size: 25px;
+
+}

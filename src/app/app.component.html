@@ -1,0 +1,53 @@
+<h1>Hello {{name}}</h1>
+
+<div *ngIf="bool">
+  <button #myButton (click)="func2(myText.value)" class="big-button">Click Here</button>
+  <input type="text" #myText placeholder="Enter text and click button"/>
+</div>
+
+<ul>
+  <li *ngFor="let intern of interns">{{intern.name}}</li>
+</ul>
+
+<input type="text" class="form-control" id="name"
+       required
+       [(ngModel)]="name" name="name"
+       #spy="ngModel">
+
+<div [hidden]="spy.valid || spy.pristine"
+     class="alert alert-danger">Name is required</div>
+
+<br />
+
+<form (ngSubmit)="submitForm()">
+  <h2>Form:</h2>
+  <input type="text" id="intern-id"
+         required
+         [(ngModel)]="intern.id" name="intern-id"
+         #internId="ngModel">
+
+  <div [hidden]="internId.valid"
+       class="alert alert-danger">Id is required</div>
+
+  <br/>
+
+  <input type="text" id="intern-name"
+         required
+         [(ngModel)]="intern.name" name="intern-name"
+         #internName="ngModel">
+
+  <div [hidden]="internName.valid"
+       class="alert alert-danger">Name is required</div>
+
+  <br/>
+
+  <button type="submit" class="big-button">Submit</button>
+
+</form>
+
+<ul>
+  <li *ngFor="let intern of myInterns">{{intern.name}}</li>
+</ul>
+
+<a routerLink="/home">Change route</a>
+<router-outlet></router-outlet>
